@@ -9,6 +9,8 @@
 
   <li>
     <a href="{{.Permalink}}">{{.Title}}</a>
+    <p>{{ .Summary}}</p> 
+    <!-- Summary digunakan untuk menampilkan isi konten 70 kata pertama -->
     <span>{{.Date.Format "02-01-2006"}}</span>
   </li>
   {{end}}
