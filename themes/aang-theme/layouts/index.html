@@ -1,0 +1,42 @@
+{{ define "main" }}
+<!-- Mengambil judul dari config.toml -->
+<h1>{{.Title}}</h1>
+
+<h2>Daftar Konten</h2>
+<ul>
+    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+  {{range where .Site.RegularPages "Section" "blog"}}
+
+  <li>
+    <a href="{{.Permalink}}">{{.Title}}</a>
+    <span>{{.Date.Format "02-01-2006"}}</span>
+  </li>
+  {{end}}
+</ul>
+
+<h2>Daftar Aang</h2>
+<ul>
+    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+  {{range where .Site.RegularPages "Section" "aang"}}
+
+  <li>
+    <a href="{{.Permalink}}">{{.Title}}</a>
+    <span>{{.Date.Format "02-01-2006"}}</span>
+  </li>
+  {{end}}
+</ul>
+
+<h2>Semua File MD</h2>
+<ul>
+    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+  {{range .Site.RegularPages}}
+
+  <li>
+    <a href="{{.Permalink}}">{{.Title}}</a>
+    <span>{{.Date.Format "02-01-2006"}}</span>
+  </li>
+  {{end}}
+</ul>
+
+
+{{ end }}

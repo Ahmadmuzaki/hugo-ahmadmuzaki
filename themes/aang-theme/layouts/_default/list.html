@@ -1,0 +1,15 @@
+{{ define "main" }}
+<!-- Mengambil judul dari config.toml -->
+<h1>{{.Title}}</h1>
+<ul>
+    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+  {{range .Pages}}
+
+  <li>
+    <a href="{{.Permalink}}">{{.Title}}</a>
+    <span>{{.Date.Format "02-01-2006"}}</span>
+  </li>
+  {{end}}
+</ul>
+
+{{ end }}

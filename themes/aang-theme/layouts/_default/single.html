@@ -1,0 +1,9 @@
+{{ define "main" }}
+<!-- Mengambil judul dari config.toml -->
+<h1>{{.Title}}</h1>
+<div>
+  {{.Content}}
+  <span>{{.Date.Format "02-01-2006"}}</span>
+</div>
+<span>Dibuat pada : {{.Date.Format "02-01-2006"}}</span>
+{{ end }}

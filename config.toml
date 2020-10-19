@@ -1,5 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "ananke"
+title = "Aang Morningstar"
+theme = "aang-theme"
 
+# [permalinks]
+#     blog = ":title" #ahmadmuzaki.com/blog/ahmadmuzaki menjadi ahmadmuzaki.com/ahmadmuzaki
