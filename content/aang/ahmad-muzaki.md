@@ -11,4 +11,4 @@ tags:
   - python
 ---
 
-Halaman Ahmad Muzaki Salman Alfaris 
+Halaman Ahmad Muzaki Salman Alfaris
