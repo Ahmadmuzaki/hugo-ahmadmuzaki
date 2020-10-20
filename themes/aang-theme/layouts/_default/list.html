@@ -3,13 +3,23 @@
 <h1>{{.Title}}</h1>
 <ul>
     <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
-  {{range .Pages}}
+  {{range .Paginator.Pages}}
 
   <li>
     <a href="{{.Permalink}}">{{.Title}}</a>
+    <p>{{ .Summary}}</p> 
     <span>{{.Date.Format "02-01-2006"}}</span>
   </li>
   {{end}}
 </ul>
+<!-- Menampilkan halaman di web -->
+{{template "_internal/pagination.html" . }}
+
+{{ if .Paginator.HasPrev}}
+<a href="{{ .Paginator.Prev.URL}}">Sebelumnya</a>
+{{ end }}
+{{ if .Paginator.HasNext}}
+<a href="{{ .Paginator.Next.URL}}">Selanjutnya</a>
+{{ end }}
 
 {{ end }}

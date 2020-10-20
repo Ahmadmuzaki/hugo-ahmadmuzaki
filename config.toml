@@ -2,6 +2,8 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Aang Morningstar"
 theme = "aang-theme"
+summaryLength = 17
+paginate = 2
 [params]
     Description ="Belajar Hugo"
 
