@@ -1,16 +1,18 @@
 {{ define "main" }}
 <!-- Mengambil judul dari config.toml -->
+{{ if .IsHome}}
 <section class="banner"></section>
+{{ end }}
 <h1>{{.Title}}</h1>
 
 <h2>Daftar Konten</h2>
 <ul>
-    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+  <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
   {{range where .Site.RegularPages "Section" "blog"}}
 
   <li>
     <a href="{{.Permalink}}">{{.Title}}</a>
-    <p>{{ or .Params.description .Summary}}</p> 
+    <p>{{ or .Params.description .Summary}}</p>
     <!-- Jika tidak ada description maka tampilkan summary -->
     <!-- Summary digunakan untuk menampilkan isi konten 70 kata pertama secara default atau bisa di ganti di config toml -->
     <span>{{.Date.Format "02-01-2006"}}</span>
@@ -20,7 +22,7 @@
 
 <h2>Daftar Aang</h2>
 <ul>
-    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+  <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
   {{range where .Site.RegularPages "Section" "aang"}}
 
   <li>
@@ -32,7 +34,7 @@
 
 <h2>Semua File MD</h2>
 <ul>
-    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+  <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
   {{range .Site.RegularPages}}
 
   <li>
@@ -42,5 +44,12 @@
   {{end}}
 </ul>
 
+<script>
+  window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  })
+</script>
 
 {{ end }}
+
