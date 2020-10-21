@@ -14,23 +14,8 @@
   <meta name="description" content="{{ .Summary}}" />
   {{ else }}
   <meta name="description" content="{{ .Site.Params.Description}}" />
-  {{ end }}
-
-  {{ if .IsHome}}
+  {{ end }} {{ if .IsHome}}
   <style>
-    .column {
-      width: 33.33%;
-      /*  padding-left: 40px;  */
-      float: right;
-      background-color: #264653;
-      color: whitesmoke;
-      text-align: center;
-    }
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
     * {
       margin: 0;
       padding: 0;
@@ -47,10 +32,11 @@
       transition: 0.6s;
       padding: 5px 50px;
       z-index: 1000;
+      box-shadow: 0 2px 5px -1px rgba(0,0,0,0.25);
     }
     header.sticky {
       padding: 5px 50px;
-      background: #0E003B;
+      background: #0e003b;
     }
     header.sticky ul li a {
       color: white;
@@ -97,8 +83,8 @@
       background: url("/images/baru.jpg");
       background-size: cover;
     }
-    .banner-single{
-      background-color: #0E003B ;
+    .banner-single {
+      background-color: #0e003b;
       position: relative;
       width: 100%;
       height: 11vh;
@@ -107,19 +93,6 @@
   </style>
   {{else}}
   <style>
-    .column {
-      width: 33.33%;
-      /*  padding-left: 40px;  */
-      float: right;
-      background-color: #264653;
-      color: whitesmoke;
-      text-align: center;
-    }
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
     header {
       position: fixed;
       top: 0;
@@ -131,7 +104,8 @@
       transition: 0.6s;
       padding: 5px 50px;
       z-index: 1000;
-      background: #0E003B;
+      background: #0e003b;
+      box-shadow: 0 2px 5px -1px rgba(0,0,0,0.25);
     }
     header .logo {
       position: relative;
@@ -164,14 +138,31 @@
       font-weight: 500;
       transition: 0.6s;
     }
-    .banner-single{
-      background-color: #0E003B ;
+    .banner-single {
+      background-color: #0e003b;
       position: relative;
       width: 100%;
-      height: 11vh;
+      height: 10vh;
       z-index: 0;
     }
   </style>
   {{ end }}
-  
+  <style>
+    .column {
+      width: 33.33%;
+      /*  padding-left: 40px;  */
+      float: right;
+      background-color: #264653;
+      color: whitesmoke;
+      text-align: center;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .inden{
+    margin: 20px;
+    }
+  </style>
 </head>
