@@ -6,6 +6,6 @@ summaryLength = 17
 paginate = 2
 [params]
     Description ="Belajar Hugo"
-
+    BannerImage = "https://asset.kompas.com/crops/43BL_Jv4whTBdcNNbDwb7HFF_Fo=/0x0:1000x667/750x500/data/photo/2020/03/10/5e677a1b83e8d.jpg"
 # [permalinks]
 #     blog = ":title" #ahmadmuzaki.com/blog/ahmadmuzaki menjadi ahmadmuzaki.com/ahmadmuzaki
