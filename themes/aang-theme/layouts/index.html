@@ -3,13 +3,14 @@
 {{ if .IsHome}}
 <section class="banner"></section>
 {{ end }}
-<h1>{{.Title}}</h1>
+<section class="inden">
+  <h1>{{.Title}}</h1>
 
   <h2>Daftar Konten</h2>
   <ul>
     <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
     {{range where .Site.RegularPages "Section" "blog"}}
-  
+
     <li>
       <a href="{{.Permalink}}">{{.Title}}</a>
       <p>{{ or .Params.description .Summary}}</p>
@@ -19,6 +20,7 @@
     </li>
     {{end}}
   </ul>
+</section>
 
 <h2>Daftar Aang</h2>
 <ul>
@@ -45,11 +47,10 @@
 </ul>
 
 <script>
-  window.addEventListener("scroll", function(){
+  window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
-  })
+  });
 </script>
 
 {{ end }}
-
