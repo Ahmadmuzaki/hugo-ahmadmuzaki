@@ -22,29 +22,33 @@
   </ul>
 </section>
 
-<h2>Daftar Aang</h2>
-<ul>
-  <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
-  {{range where .Site.RegularPages "Section" "data"}}
+<section class="inden">
+  <h2>Daftar Aang</h2>
+  <ul>
+    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+    {{range where .Site.RegularPages "Section" "data"}}
 
-  <li>
-    <a href="{{.Permalink}}">{{.Title}}</a>
-    <span>{{.Date.Format "02-01-2006"}}</span>
-  </li>
-  {{end}}
-</ul>
+    <li>
+      <a href="{{.Permalink}}">{{.Title}}</a>
+      <span>{{.Date.Format "02-01-2006"}}</span>
+    </li>
+    {{end}}
+  </ul>
+</section>
 
-<h2>Semua File MD</h2>
-<ul>
-  <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
-  {{range .Site.RegularPages}}
+<section class="inden">
+  <h2>Semua File MD</h2>
+  <ul>
+    <!-- Section dan blog ibarat parameter dan where ada menentukan kondisi -->
+    {{range .Site.RegularPages}}
 
-  <li>
-    <a href="{{.Permalink}}">{{.Title}}</a>
-    <span>{{.Date.Format "02-01-2006"}}</span>
-  </li>
-  {{end}}
-</ul>
+    <li>
+      <a href="{{.Permalink}}">{{.Title}}</a>
+      <span>{{.Date.Format "02-01-2006"}}</span>
+    </li>
+    {{end}}
+  </ul>
+</section>
 
 <script>
   window.addEventListener("scroll", function () {
